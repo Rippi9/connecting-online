@@ -1,3 +1,4 @@
+HEAD
 *,
 *::before,
 *::after {
@@ -124,4 +125,16 @@ input:hover {
 
 #msg.error {
   color: #e6252c;
+}
+.loginBox {
+    width:20%;
+}
+.SubmitLogin {
+    padding: 0;
+    margin: 5px;
+    float: right;
+}
+.checkAccount {
+    margin-top: 50px;
+
 }
