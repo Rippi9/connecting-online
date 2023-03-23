@@ -1,0 +1,11 @@
+.loginBox {
+    width:20%;
+}
+.SubmitLogin {
+    padding: 0;
+    margin: 5px;
+    float: right;
+}
+.checkAccount {
+    margin-top: 50px;
+}
