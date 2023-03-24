@@ -1,27 +1,23 @@
 <header>
         <!-- title -->
     </header>
-    <div class="position-absolute top-50 start-50 translate-middle loginBox">
-        <!-- Content here -->
-        <div class="loginTitle">
-            <h2>Login</h2>
-        </div>
-        <div class="form-floating mb-3">
-            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-            <label for="floatingInput">Email address</label>
-        </div>
-        <div class="form-floating">
-            <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-            <label for="floatingPassword">Password</label>
-        </div>
-        <div class="SubmitLogin">
-            <button type="button" class="btn btn-primary">Login</button>
-        
-        </div><br>
-        <div class="container">
-            <p class="checkAccount">Dont have an account?
-                <a href="create-account.html">Create Account Here</a>
-            </p>
-        </div>
+    <div class="container">
+      <img class="photo" src="/photos/loginBackgroundImg.jpg" alt="gaming image, headphones, keyboard and mouse">
+      <div class="card">
+        <h2>GG WP HF GL</h2>
+        <form method="POST">
+          <div class="input-group">
+            <label for="email">Email</label>
+            <input type="text" name="email" id="email" placeholder="Enter Email Here" />
+          </div>
+          <div class="input-group">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Enter Password Here" />
+            <div>Don't have an accout? CLICK HERE</div>
+          </div>
+          <div id="msg"></div>
+          <button id="sign-up">Login</button>
+        </form>
+      </div>
     </div>
     
