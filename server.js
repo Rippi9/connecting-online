@@ -3,6 +3,10 @@ const path = require('path');
 const sequelize = require('./config/connection');
 const session = require('express-session');
 const exphbs = require('express-handlebars');
+const routes = require('./controllers');
+
+// Routes
+
 
 const SequelizeStore = require('connect-session-sequelize')(session.Store);
 
@@ -39,9 +43,7 @@ app.use(express.static(path.join(__dirname,'public')));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'handlebars');
 
-app.get('/', (req, res) => {
-  res.render('landingPage');
-})
+app.use(routes);
 
 
 sequelize.sync({ force: false }).then(() => {
