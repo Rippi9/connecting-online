@@ -160,7 +160,7 @@ button.btn.btn-primary.btn-lg:hover {
   background-color:#737474;
 }
 
-
+/* SVG BACKGROUND */
 body {
   background: -moz-linear-gradient(45deg, #02e1ba 0%, #12272d 29%, #24f211 66%, #ffa079 100%);
   background: -webkit-linear-gradient(45deg, #02e1ba 0%,#26c9f2 29%,#d911f2 66%,#ffa079 100%);
@@ -286,3 +286,25 @@ to {
     transform: rotateY(360deg) 
   }
   }
+  /* Dashboard CSS */
+  button.btn.btn-primary.sidebar {
+    margin-top: 90%;
+    margin-left: 100%;
+    z-index: 100;
+}
+
+h1 {
+    margin-top: 83px;
+    font-size: 78px;
+    margin-right: 420px;
+    z-index: 100;
+}
+.latestPost {
+    text-align: center;
+}
+h2.dashboard {
+    font-size: 50px;
+}
+.latestTitle, .posts {
+    text-align: center;
+}
