@@ -29,7 +29,7 @@ const sess = {
     db: sequelize
   })
 };
-
+app.use(session(sess));
 // Set handlebars as default view engine
 const hbs = exphbs.create({});
 app.engine('handlebars', hbs.engine);
