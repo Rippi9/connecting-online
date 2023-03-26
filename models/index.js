@@ -25,4 +25,11 @@ Group.belongsToMany(User, {
     as: 'groupsForUsers'
 });
 
+module.exports = {
+    User,
+    Profile,
+    Group,
+    UserGroup,
+};
+
 //Create paths in 'UserGroups'
