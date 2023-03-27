@@ -1,10 +1,10 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Group extends Model {}
+class Clan extends Model {}
 
 //Continue with this section
-Group.init(
+Clan.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -19,15 +19,22 @@ Group.init(
         description: {
             type: DataTypes.STRING,
             allowNull: false
-        }
+        },
+        user_id: {
+            type: DataTypes.INTEGER,
+            references: {
+                model: 'user',
+                key: 'id',
+            },
+        },
     },
     {
         sequelize,
         timestamps: true,
         freezeTableName: true,
         underscored: true,
-        modelName: 'group',
+        modelName: 'clan',
     }
-);
+)
 
-module.exports = Group;
+module.exports = Clan;

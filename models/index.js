@@ -1,6 +1,7 @@
 const User = require('./User');
 const Profile = require('./Profile');
-const Group = require('./Groups');
+const Clan = require('./Clan');
+const UserClan = require('./UserClan');
 
 User.hasOne(Profile, {
     foreignKey: 'user_id',
@@ -11,25 +12,23 @@ Profile.belongsTo(User, {
     foreignKey: 'user_id'
 });
 
-User.belongsToMany(Group, {
+User.belongsToMany(Clan, {
     through: {
-        model: UserGroup,
+        model: UserClan,
     },
-    as: 'usersForGroups'
+    as: 'usersForClans'
 });
 
-Group.belongsToMany(User, {
+Clan.belongsToMany(User, {
     through: {
-        model: UserGroup,
+        model: UserClan,
     },
-    as: 'groupsForUsers'
+    as: 'ClansForUsers'
 });
 
 module.exports = {
     User,
     Profile,
-    Group,
-    UserGroup,
+    Clan,
+    UserClan,
 };
-
-//Create paths in 'UserGroups'

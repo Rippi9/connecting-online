@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class UserGroup extends Model {}
+class UserClan extends Model {}
 
-UserGroup.init(
+UserClan.init(
     {
         id: {
             type: DataTypes.INTEGER,
@@ -17,23 +17,23 @@ UserGroup.init(
             references: {
                 model: 'user',
                 key: 'id'
-            }
+            },
         },
-        group_id: {
+        clan_id: {
             type: DataTypes.INTEGER,
             references: {
-                model: 'group',
+                model: 'clan',
                 key: 'id'
-            }
-        }
+            },
+        },
     },
     {
         sequelize,
         timestamps: false,
         freezeTableName: true,
         underscored: true,
-        modelName: 'UserGroup',
+        modelName: 'UserClan',
       }
 );
 
-module.exports = UserGroup;
+module.exports = UserClan;
