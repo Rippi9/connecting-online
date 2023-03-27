@@ -1,0 +1,3 @@
+DROP DATABASE IF EXISTS gamers_db;
+
+CREATE DATABASE gamers_db;
