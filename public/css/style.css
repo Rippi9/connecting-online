@@ -12,10 +12,16 @@ body {
 }
 
 h2 {
+  color: #f7f8f8;
   font-size: 3em;
   margin: 0px;
   margin-top: 0.45em;
   margin-bottom: 0.45em;
+}
+
+p {
+  color: #eceff1;
+
 }
 
 button {
@@ -48,12 +54,13 @@ button {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  
 
 
 }
 
 label {
-  color: #212121;
+  color: #f3ebeb;
 }
 
 input {
@@ -80,10 +87,10 @@ input:hover {
 }
 
 .card {
-  background-color: #746b6b;
-  border: 1px solid #eceff1;
+   
+  border: 1px solid #00060a;
   border-radius: 50px;
-  box-shadow: rgba(60, 64, 67, 0.3) 0 1px 2px 0,
+  box-shadow: rgba(229, 232, 235, 0.3) 0 1px 2px 0,
     rgba(60, 64, 67, 0.15) 0 1px 3px 1px;
   margin: 26%;
   margin-top: 80px;
@@ -92,6 +99,9 @@ input:hover {
   overflow: hidden;
   position: relative;
   float: left;
+  background-image: url("../photos/loginBackgroundImg.jpg");
+  background-image: cross-fade();
+  background-size: cover;
 }
 
 .card::after {
