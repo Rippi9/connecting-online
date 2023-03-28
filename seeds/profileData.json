@@ -1,18 +1,18 @@
 [
     {
       "bio": "My name is Michael",
-      "user_id": 1
-    },
-    {
-      "bio": "My name is Trung",
       "user_id": 2
     },
     {
+      "bio": "My name is Trung",
+      "user_id": 4
+    },
+    {
       "bio": "My name is Blaize",
-      "user_id": 3
+      "user_id": 1
     },
     {
       "bio": "My name is Ben",
-      "user_id": 4
+      "user_id": 3
     }
   ]
