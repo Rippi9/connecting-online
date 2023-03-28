@@ -34,10 +34,11 @@ const loginFormHandler = async (event) => {
     if(response.ok) {
       document.location.replace ('/api/dashboard');
     } else {
-      console.error(error);
+      console.error('Login Failed');
     }
 
   }
  };
+
  const loginToDashboard = document.querySelector('#sign-up');
  loginToDashboard.addEventListener("click", loginFormHandler);
