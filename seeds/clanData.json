@@ -1,0 +1,27 @@
+[
+    {
+      "name": "Valorant LFG",
+      "game": "Valorant",
+      "platform": "PC",
+      "region": "Oceania",
+      "playercount": "3",
+      "description": "3 players needed for game of ranked - ascendant + rank required"
+    },
+    {
+      "name": "CSGO LFG",
+      "game": "CSGO",
+      "platform": "PC",
+      "region": "North America",
+      "playercount": "2",
+      "description": "2 players needed for csgo team - mic required and 18+"
+    },
+    {
+      "name": "Call of Duty LFG",
+      "game": "Call of Duty",
+      "platform": "PS",
+      "region": "Europe",
+      "playercount": "3",
+      "description": "3 players needed for ranked play, must have mic and dont be bad"
+    }
+  ]
+  
