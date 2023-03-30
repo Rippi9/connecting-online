@@ -22,10 +22,18 @@
 <div class="container-fluid">
   <div class="row">
 
-    <!-- Chat -->
-    <div id="chat" class="col-10">
-      <h3>Chat</h3>
-    </div>
+      <!-- Chat -->
+      {{#each clan as |clan| }}  
+      <div id="chat" class="col-10">
+        <h3>Chat</h3>
+        <h2>
+        <a href="clan/{{clan.id}}">{{clan.name}}</a>
+        </h2>
+        <p>
+            <span> </span>
+
+        </p>
+      </div>
 
     <!-- Group -->
     <div id="group" class="col">
