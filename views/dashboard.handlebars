@@ -1,3 +1,4 @@
+
 <div class="titleUni position-absolute top-0 start-100 translate-middle">
   <h1><strong class="title">UNIFIEDGG</strong></h1>
 </div>
@@ -15,26 +16,52 @@
       </ul>
     </div>
   </div>
-</div> --}}
+</d
+iv> --}}
 
-
-
+<!-- Chat -->
+{{!-- {{#each clan as |clan| }}
 <div class="container-fluid">
   <div class="row">
-
-      <!-- Chat -->
-      {{#each clan as |clan| }}  
       <div id="chat" class="col-10">
         <h3>Chat</h3>
         <h2>
-        <a href="clan/{{clan.id}}">{{clan.name}}</a>
+        <a href="/clan/>{{clan.id}}">{{clan.name}}</a>
         </h2>
         <p>
-            <span> </span>
-
+            <p>Game: {{clan.game}} </p>
+            <p>Platform: {{clan.platform}} </p>
+            <p>Region: {{clan.region}} </p>
+            <p>Players Needed: {{clan.playercount}} </p>
+            <p>Description: {{clan.description}} </p>
+            <p>Created by {{clan.user.username}} on </p>
         </p>
       </div>
+</div>
+{{/each}} --}}
 
+{{#each clans as |clan| }}
+  <div class="container-fluid">
+    <div class="row">
+      <div id="chat" class="col-10">
+        <h3>Chat</h3>
+        <h2>
+          <a href="/clan/">{{clan.id}}</a>{{clan.name}}</a>
+        </h2>
+        <p>
+          <p>Game: {{clan.game}}</p>
+          <p>Platform: {{clan.platform}}</p>
+          <p>Region: {{clan.region}}</p>
+          <p>Players Needed: {{clan.playercount}}</p>
+          <p>Description: {{clan.description}}</p>
+          <p>Created by {{clan.creator.username}} on {{clan.createdAt}}</p>
+        </p>
+      </div>
+    </div>
+  </div>
+{{/each}}
+
+<div class="container-fluid">
     <!-- Group -->
     <div id="group" class="col">
       <h3 id="group_name">Create Group</h3>

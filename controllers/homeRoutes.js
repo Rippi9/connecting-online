@@ -32,22 +32,39 @@ router.get('/signUp', async (req, res) => {
 
 // Dashboard route after login
 
-router.get("/dashboard", withAuth, async (req, res) => {
+router.get('/dashboard', withAuth, async (req, res) => {
   try {
-    // ADD USER DATA TO DASHBOARD PAGE============================
-    
+    // Get all clans and include user data
+    const clanData = await Clan.findAll({
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+          as: 'ClansForUsers',
+        },
+        {
+          model: User,
+          attributes: ['username', 'id'],
+          as: 'creator',
+        },
+        // above
+      ],
+    });
 
-
+    // Serialize data so the template can read it
+    const clans = clanData.map((clan) => clan.get({ plain: true }));
+    console.log(clans);
+    // Pass serialized data
     res.render('dashboard',{
-    logged_in: req.session.logged_in});
-  } catch {
+    clans,  
+    logged_in: req.session.logged_in
+  });
+  } catch (err) {
+    console.log (err);
+
     res.status(500).json({ message: "There has been an internal error within dashboard route" });
   }
 });
 
 
-
-
-
-
-module.exports = router
+module.exports = router;
