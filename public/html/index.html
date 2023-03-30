@@ -61,47 +61,47 @@
 
   <div class="container-fluid">
     <div class="row">
-
+  
       <!-- Chat -->
       <div id="chat" class="col-10">
         <h3>Chat</h3>
       </div>
-
+  
       <!-- Group -->
       <div id="group" class="col">
         <h3 id="group_name">Create Group</h3>
-        
+  
         <!-- select a game dropdown list -->
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select id="select_game" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
           <option selected>Select a Game</option>
-          <option value="1">Valorant</option>
-          <option value="2">CSGO</option>
-          <option value="3">Destiny</option>
-          <option value="4">LoL</option>
+          <option value="Valorant">Valorant</option>
+          <option value="CSGO">CSGO</option>
+          <option value="Destiny">Destiny</option>
+          <option value="LoL">LoL</option>
         </select>
-
+  
         <!-- select platform dropdown list -->
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select id="select_platform" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
           <option selected>Select a Platform</option>
-          <option value="1">PC</option>
-          <option value="2">PS</option>
-          <option value="3">Xbox</option>
+          <option value="PC">PC</option>
+          <option value="PS">PS</option>
+          <option value="Xbox">Xbox</option>
         </select>
-
+  
         <!-- select region dropdown list -->
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+        <select id="select_region" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
           <option selected>Select a Region</option>
-          <option value="1">Oceania</option>
-          <option value="2">North America</option>
-          <option value="3">South America</option>
-          <option value="4">Asia</option>
-          <option value="5">Africa</option>
-          <option value="6">europe</option>
+          <option value="Oceania">Oceania</option>
+          <option value="North America">North America</option>
+          <option value="South America">South America</option>
+          <option value="Asia">Asia</option>
+          <option value="Africa">Africa</option>
+          <option value="Europe">Europe</option>
         </select>
-
+  
         <!-- select no player dropdown list -->
-        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-          <option selected>Select a Region</option>
+        <select id="select_players" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+          <option selected>Number of Players</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
@@ -109,16 +109,15 @@
           <option value="5">5</option>
           <option value="6">6</option>
         </select>
-
+  
         <div class="mb-3">
-        
-          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+            placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
         </div>
-
+  
         <!-- Button -->
-        <button type="button" class="btn btn-primary" id = "post_button">POST GROUP</button>
-
-
+        <button type="button" class="btn btn-primary" id="post_button">POST GROUP</button>
+  
       </div>
     </div>
   </div>
@@ -126,9 +125,8 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
     integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
     crossorigin="anonymous"></script>
-  <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
-    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
-    crossorigin="anonymous"></script> -->
+
+    <script src="../js/dashboard.js" ></script>
 </body>
 
 </html>
