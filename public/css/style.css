@@ -86,7 +86,8 @@ input:hover {
   background-color: #2ec910;
 }
 
-.card {
+/* styling for login cards etc */
+.cardlogin {
    
   border: 1px solid #00060a;
   border-radius: 50px;
@@ -421,3 +422,5 @@ h3{
 #post_button{
   margin: 30px;
 }
+
+
