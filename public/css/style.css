@@ -423,4 +423,10 @@ h3{
   margin: 30px;
 }
 
+/* positioning for text in nav bar */
+.position-absolute.top-0.start-50.translate-middle {
+  margin-top: 38px;
+}
+
+
 

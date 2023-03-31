@@ -22,6 +22,14 @@
       "region": "Europe",
       "playercount": "3",
       "description": "3 players needed for ranked play, must have mic and dont be bad"
+    },
+    {
+      "name": "League of Legends LFG",
+      "game": "League of Legends",
+      "platform": "PC",
+      "region": "Asia",
+      "playercount": "1",
+      "description": "1 player needed for league of legends"
     }
   ]
   
