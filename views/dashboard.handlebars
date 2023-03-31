@@ -1,22 +1,32 @@
 {{!-- Dashboard elements --}}
 
 {{!-- Header Bar --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand mx-auto" href="#">Welcome to UNIFIED GG - Find a Clan, Team Up, and Win</a>
-    </nav>
+<nav class="navbar navbar-expand-lg navbar-light bg-light align-middle">
+  
+  <img src="/photos/Valorant-Logo.png" width="auto" height="50px" alt="valorant logo" style="margin-left: 10%;">
+  
+  
+  {{!-- <img src="../public/photos/CSGO-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 20%;"> --}}
+  <div class="position-absolute top-0 start-50 translate-middle">
+    <p class="navbar-brand mx-auto" href="#">Welcome to UNIFIED GG - Find a Clan, Team Up, and Win</p>
+  </div>
+  
+  {{!-- <img src="../public/photos/Destiny-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 80%;">
+  <img src="../public/photos/League-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 90%;">   --}}  
+</nav>
       
     
     <!-- main content -->
     <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px;">
-                    <h3 class="card-header text-center">
-                        Open Groups
-                    </h3>
-                    <div class="card-body" style="overflow-y: scroll;">  
-                        {{#each clans as |clan| }}                   
-                        <div class="row row-cols-1 row-cols-md-3 g-4">                                    
+    <div class="row flex-wrap">
+        <div class="col-md-9">
+            <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px;">
+                <h3 class="card-header text-center">
+                    Open Groups
+                </h3>
+                <div class="card-body" style="overflow-y: scroll;">
+                    <div class="row row-cols-1 row-cols-md-3 g-4">
+                        {{#each clans as |clan index| }}
                             <div class="col">
                                 <div class="card h-100">
                                     <div class="card-header">
@@ -32,13 +42,15 @@
                                     </div>
                                 </div>
                             </div>
-                        </div> <!-- end of nested row -->
                         {{/each}}
                     </div>
                 </div>
             </div>
+        </div>
+
+
             <!-- Group -->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px;">
                     <div id="group" class="card-header text-center">
                         <h3 id="group_name">Create Group</h3>
@@ -60,7 +72,6 @@
                             <option value="3">Xbox</option>
                         </select>
 
-
                         <!-- select region dropdown list -->
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                             <option selected>Select a Region</option>
@@ -69,8 +80,9 @@
                             <option value="3">South America</option>
                             <option value="4">Asia</option>
                             <option value="5">Africa</option>
-                            <option value="6">europe</option>
+                            <option value="6">Europe</option>
                         </select>
+
                         <!-- select no# player dropdown list -->
                         <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                             <option selected>Players Required</option>
@@ -94,6 +106,6 @@
                     </div>
                 </div>
             </div> <!-- end of outer row -->
-        </div>
-  
+    </div>
+    </div>
 
