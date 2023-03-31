@@ -1,120 +1,99 @@
+{{!-- Dashboard elements --}}
 
-<div class="titleUni position-absolute top-0 start-100 translate-middle">
-  <h1><strong class="title">UNIFIEDGG</strong></h1>
-</div>
-{{!-- <!-- Dashboard elements -->
-<div class="container">
-
-  <div class="position-absolute top-50 start-50 translate-middle">
-    <h2 class="dashboard">Dashboard</h2>
-    <div class="latestPosts">
-      <p class="latestTitle">Latest posts</p>
-      <ul class="posts">
-        <li>post1</li>
-        <li>post2</li>
-        <li>post3</li>
-      </ul>
-    </div>
-  </div>
-</d
-iv> --}}
-
-<!-- Chat -->
-{{!-- {{#each clan as |clan| }}
-<div class="container-fluid">
-  <div class="row">
-      <div id="chat" class="col-10">
-        <h3>Chat</h3>
-        <h2>
-        <a href="/clan/>{{clan.id}}">{{clan.name}}</a>
-        </h2>
-        <p>
-            <p>Game: {{clan.game}} </p>
-            <p>Platform: {{clan.platform}} </p>
-            <p>Region: {{clan.region}} </p>
-            <p>Players Needed: {{clan.playercount}} </p>
-            <p>Description: {{clan.description}} </p>
-            <p>Created by {{clan.user.username}} on </p>
-        </p>
-      </div>
-</div>
-{{/each}} --}}
-
-{{#each clans as |clan| }}
-  <div class="container-fluid">
-    <div class="row">
-      <div id="chat" class="col-10">
-        <h3>Chat</h3>
-        <h2>
-          <a href="/clan/">{{clan.id}}</a>{{clan.name}}</a>
-        </h2>
-        <p>
-          <p>Game: {{clan.game}}</p>
-          <p>Platform: {{clan.platform}}</p>
-          <p>Region: {{clan.region}}</p>
-          <p>Players Needed: {{clan.playercount}}</p>
-          <p>Description: {{clan.description}}</p>
-          <p>Created by {{clan.creator.username}} on {{clan.createdAt}}</p>
-        </p>
-      </div>
-    </div>
-  </div>
-{{/each}}
-
-<div class="container-fluid">
-    <!-- Group -->
-    <div id="group" class="col">
-      <h3 id="group_name">Create Group</h3>
-
-      <!-- select a game dropdown list -->
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option selected>Select a Game</option>
-        <option value="1">Valorant</option>
-        <option value="2">CSGO</option>
-        <option value="3">Destiny</option>
-        <option value="4">LoL</option>
-      </select>
-
-      <!-- select platform dropdown list -->
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option selected>Select a Platform</option>
-        <option value="1">PC</option>
-        <option value="2">PS</option>
-        <option value="3">Xbox</option>
-      </select>
-
-      <!-- select region dropdown list -->
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option selected>Select a Region</option>
-        <option value="1">Oceania</option>
-        <option value="2">North America</option>
-        <option value="3">South America</option>
-        <option value="4">Asia</option>
-        <option value="5">Africa</option>
-        <option value="6">europe</option>
-      </select>
-
-      <!-- select no player dropdown list -->
-      <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-        <option selected>Select a Region</option>
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-      </select>
-
-      <div class="mb-3">
-
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
-          placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
-      </div>
-
-      <!-- Button -->
-      <button type="button" class="btn btn-primary" id="post_button">POST GROUP</button>
+{{!-- Header Bar --}}
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand mx-auto" href="#">Welcome to UNIFIED GG - Find a Clan, Team Up, and Win</a>
+    </nav>
+      
+    
+    <!-- main content -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px;">
+                    <h3 class="card-header text-center">
+                        Open Groups
+                    </h3>
+                    <div class="card-body" style="overflow-y: scroll;">  
+                        {{#each clans as |clan| }}                   
+                        <div class="row row-cols-1 row-cols-md-3 g-4">                                    
+                            <div class="col">
+                                <div class="card h-100">
+                                    <div class="card-header">
+                                        <a href="/clan/">Group {{clan.id}} - {{clan.name}}</a>
+                                    </div>
+                                    <div class="card-body">
+                                        <p>Game: {{clan.game}}</p>
+                                        <p>Platform: {{clan.platform}}</p>
+                                        <p>Region: {{clan.region}}</p>
+                                        <p>Players Needed: {{clan.playercount}}</p>
+                                        <p>Description: {{clan.description}}</p>
+                                        <p>Created by {{clan.creator.username}} on {{clan.createdAt}}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end of nested row -->
+                        {{/each}}
+                    </div>
+                </div>
+            </div>
+            <!-- Group -->
+            <div class="col-md-4">
+                <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px;">
+                    <div id="group" class="card-header text-center">
+                        <h3 id="group_name">Create Group</h3>
+                    </div>
+                    <!-- select a game dropdown list -->
+                    <div class="card-body">
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Select a Game</option>
+                            <option value="1">Valorant</option>
+                            <option value="2">CSGO</option>
+                            <option value="3">Destiny</option>
+                            <option value="4">LoL</option>
+                        </select>
+                        <!-- select platform dropdown list -->
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Select a Platform</option>
+                            <option value="1">PC</option>
+                            <option value="2">PS</option>
+                            <option value="3">Xbox</option>
+                        </select>
 
 
-    </div>
-  </div>
-</div>
+                        <!-- select region dropdown list -->
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Select a Region</option>
+                            <option value="1">Oceania</option>
+                            <option value="2">North America</option>
+                            <option value="3">South America</option>
+                            <option value="4">Asia</option>
+                            <option value="5">Africa</option>
+                            <option value="6">europe</option>
+                        </select>
+                        <!-- select no# player dropdown list -->
+                        <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option selected>Players Required</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                        </select>
+
+                        <div class="mb-3">
+
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"
+                            placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
+                        </div>
+              
+                            <!-- Button -->
+                            <button type="button" class="btn btn-primary" id="post_button">POST GROUP</button>
+                        </div>
+                    </div>
+                </div>
+            </div> <!-- end of outer row -->
+        </div>
+  
+
