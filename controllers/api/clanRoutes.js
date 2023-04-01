@@ -1,18 +1,22 @@
 const router = require('express').Router();
-const { Clan } = require('../../models');
+const { Clan, User, UserClan } = require('../../models');
 const withAuth = require('../../utils/auth');
 
-router.post('/', withAuth, async (req, res) => {
-    try {
-        const newClan = await Clan.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
+router.post('/', async (req, res) => {
+  try {
+    const newClan = await Clan.create(req.body);
 
-        res.status(200).json(newClan);
-    } catch (err) {
-        res.status(400).json(err);
-    }
+
+      req.session.save(() => {
+      req.session.user_id = newClan.id;
+      req.session.logged_in = true;
+      
+      res.status(201).json(newClan);
+    });
+    
+  } catch (err) {
+    res.status(400).json(err);
+  }
 });
 
 

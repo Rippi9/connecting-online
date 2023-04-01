@@ -150,7 +150,7 @@ button.btn.btn-primary.sidebar {
   margin-left: 45px;
 }
 
-.position-absolute.top-30.start-50.translate-middle {
+.position-absolute.top-50.start-50.translate-middle.landingpage {
   border: groove;
   padding-bottom: 10px;
   border-radius: 29px;
@@ -164,7 +164,7 @@ button.btn.btn-primary.sidebar {
 
 }
 
-button.btn.btn-primary.btn-lg {
+button.btn.btn-primary.btn-lg.landingpage {
   margin-right: 10px;
   margin-left: 10px;
   background-color: silver;
@@ -172,12 +172,12 @@ button.btn.btn-primary.btn-lg {
   color: black;
 }
 
-button.btn.btn-primary.btn-lg:hover {
+button.btn.btn-primary.btn-lg.landingpage:hover {
   background-color: #737474;
 }
 
 /* SVG BACKGROUND */
-body {
+/* body {
   background: -moz-linear-gradient(45deg, #02e1ba 0%, #12272d 29%, #24f211 66%, #ffa079 100%);
   background: -webkit-linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
   background: linear-gradient(45deg, #02e1ba 0%, #26c9f2 29%, #d911f2 66%, #ffa079 100%);
@@ -366,7 +366,7 @@ body::after {
   80% {
     transform: rotateY(360deg)
   }
-}
+} */
 
 /* Dashboard CSS */
 /* button.btn.btn-primary.sidebar {
