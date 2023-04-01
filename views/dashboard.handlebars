@@ -1,10 +1,10 @@
 {{!-- Dashboard elements --}}
 
 {{!-- Header Bar --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-light align-middle fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light bg-dark align-middle fixed-top">
   <img src="/photos/Valorant-Logo.png" class="nav-logo" alt="valorant logo">
   <img src="/photos/CSGO-Logo.png" class="nav-logo nav-logo-csgo" alt="csgo logo">
-  <p class="navbar-brand">UNIFIED GG</p>
+  <p class="navbar-brand text-light">UNIFIED GG</p>
   <img src="/photos/Destiny-Logo.png" class="nav-logo" alt="destiny logo">
   <img src="/photos/League-Logo.png" class="nav-logo" alt="league logo">
 </nav>
@@ -21,18 +21,19 @@
     <div class="container-fluid position-absolute top-50 start-50 translate-middle">
     <div class="row flex-wrap">
         <div class="col-md-9">
-            <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px;">
-                <h3 class="card-header text-center card-header-clan">
+            <div class="card bg-dark" style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px; height: calc(100% - 40px);">
+                <h3 class="card-header text-center card-header-clan text-white">
                     Open Groups
                 </h3>
-                <div class="card-body" style="overflow-y: scroll; max-height: 600px;">
+                <div class="card-body" style="overflow-y: scroll; max-height: 600px; margin-right: 7px;">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         {{#each clans as |clan index| }}
                             <div class="col col-clan">
-                                <div class="card h-100">
-                                    <div class="card-header text-center">
-                                        <a href="/clan/">Group {{clan.id}} - {{clan.name}}</a>
+                                <div class="card h-100 gaming-card group-background">
+                                    <div class="card-header text-center text-center group-title">
+                                        <p class="text-dark m-0"><strong>Group {{clan.id}} - {{clan.name}}</strong></p>
                                     </div>
+
                                     <div class="card-body">
                                         <p class="text-dark"><strong> Game:</strong> {{clan.game}}</p>
                                         <p class="text-dark"><strong>Platform:</strong> {{clan.platform}}</p>
@@ -52,19 +53,19 @@
 
             <!-- Group -->
             <div class="col-md-3">
-                <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px;">
-                    <div id="group" class="card-header text-center">
-                        <h3 id="group_name">Create Group</h3>
+                <div class="card bg-dark" style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; height: calc(100% - 40px);">
+                    <div id="group" class="card-header text-center text-white card-header-clan">
+                        <h3 id="group_name bg-dark">Create Group</h3>
                     </div>
                     <!-- select a game dropdown list -->
-                    <div class="card-body">
-                        <form id="createFrom">
+                    <div class="card-body ">
+                        <form id="createFrom ">
                               
-                                <div class="mb-3">
+                                <div class="mb-3 gaming-card">
                                     <textarea class="form-control" id="groupName" rows="1" placeholder="Enter Group Name"></textarea>
                                 </div>
 
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="select_game">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_game">
                                 <option selected>Select a Game</option>
                                 <option value="Valorant">Valorant</option>
                                 <option value="CSGO">CSGO</option>
@@ -72,7 +73,7 @@
                                 <option value="LoL">LoL</option>
                             </select>
                             <!-- select platform dropdown list -->
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="select_platform">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_platform">
                                 <option selected>Select a Platform</option>
                                 <option value="PC">PC</option>
                                 <option value="PS">PS</option>
@@ -80,7 +81,7 @@
                             </select>
                     
                             <!-- select region dropdown list -->
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="select_region">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_region">
                                 <option selected>Select a Region</option>
                                 <option value="Oceania">Oceania</option>
                                 <option value="North America">North America</option>
@@ -91,7 +92,7 @@
                             </select>
                     
                             <!-- select no# player dropdown list -->
-                            <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="select_players">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_players">
                                 <option selected>Players Required</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -110,15 +111,17 @@
                                 <option value="6">6</option>
                             </select> --}}
                     
-                            <div class="mb-3">
+                            <div class="mb-3 gaming-card">
                     
                                 <textarea class="form-control" id="groupBio" rows="5"
                                     placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
                             </div>
-                    
-                            <!-- Button -->
-                            <button type="button" class="btn btn-primary" id="post_button">POST GROUP</button>
+                              <div class="card bg-dark border-0">                           
+                            <div class="d-flex justify-content-center">
+                                <!-- Button -->
+                                <button type="button" class="btn btn-primary " id="post_button">POST GROUP</button>
                         </form>
+                            </div>                           
                     </div>
                     </div>
                 </div>
