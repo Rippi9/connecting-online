@@ -143,8 +143,7 @@ input:hover {
 /* ================================= */
 /* SignIn / Login buttons */
 button.btn.btn-primary.sidebar {
-  margin-top: 90%;
-
+  margin-top: 134%;
 }
 
 .position-absolute.top-0.start-20.translate-middle {
@@ -426,6 +425,8 @@ h3{
 /* positioning for text in nav bar */
 p.navbar-brand {
   margin-top: 15px;
+  font-size: 24px;
+  font-weight: bold;
 }
 
 nav {
@@ -475,6 +476,27 @@ nav {
 
 .card-header-clan {
   border-bottom: none !important;
+}
+
+/* Open Groups Styling */
+
+.gaming-card {
+  border: 3px solid #F4511E;
+  border-radius: 10px;
+}
+
+.group-title {
+  background: linear-gradient(to bottom right, #F4511E, #dea75a);
+}
+
+.group-background {
+  background-color: #dfdfdf;
+}
+
+/* Create group styling */
+
+.post-button-positioning {
+  text-align: center;
 }
 
 
