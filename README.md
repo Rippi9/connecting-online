@@ -21,7 +21,7 @@
 
 ## About
 
-### Game Finder Web App- Lonely Gamers
+### Group Finder Web App- UNIFIEDGG
 Project 2: Interactive Full-Stack Web Application 
 ### Project Requirements
 You and your group will use everything you’ve learned over the past six weeks to create a full-stack application that works with real-world data to solve a real-world challenge. Your project must fulfill the following requirements:
@@ -45,11 +45,17 @@ You and your group will use everything you’ve learned over the past six weeks 
 ## Description
 
 This website assists game players to find and create a team to play games together according to their favorite games, platforms, region and number of players.
-In order to use this website, the players need to create an account and provide their preference information to the website so that it can help them to find the group that shares the same preferences.
+In order to use this website, the players need to register an account and then create a group so that users can connect together and play the games they enjoy with ease. 
+
 
 <!--  -->
 ## Future Development
-TBC
+
+<li> Implement client to client chat feature.
+<li> Users select roles based on  experience.
+<li> Adding a larger library of games.
+<li> Partner with game developers/ publishers.
+<li> Honour system.    
 
 <!--  -->
 ## Installation
@@ -57,7 +63,9 @@ N/A
 
 <!--  -->
 ## Usage
-To use website please visit the following link: https://github.com/Rippi9/connecting-online
+To use website please visit the following link: [**UnifiedGG**](#https://unifiedgg.herokuapp.com/login)<br>
+
+Once the user navigates to the website and registers an account, then the user will be able to create group. Follow the on screen prompts to generate details that relates to your group and click "POST GROUP" button to create your card, the cards displayed on the dashboard are universal so other users are able to view them.  
 
 <!--  -->
 ## Contributers
@@ -65,13 +73,17 @@ In collaboration with: Blaize Underwood, Ben Swansson, Michael Monaghan & Trung 
 
 <!--  -->
 ## Contact
-N/A
+
+[**Mr. Ben Swansson**](#https://github.com/Rippi9)<br>
+[**Mr. Blaize Underwood**](#https://github.com/Blaize95)<br>
+[**Mr. Michael Monaghan**](#https://github.com/Zim40)<br>
+[**Mr. Trung Nguyen**](#https://github.com/Trung2096)<br>
 
 <!--  -->
 ## Licence Information
-Please refer to the LICENSE in the repo.
+Please refer to the following link.
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)<br>
 
 <!--  -->
 ## Screenshot
-N/A
-<!--  -->
+TBC
