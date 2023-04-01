@@ -12,7 +12,7 @@
 
 <body>
     {{!-- SideBar Menu --}}
-    <div class="position-absolute top-0 start-20 translate-middle">
+    <div class="position-absolute top-0 start-20 translate-middle" style="z-index: 1100;">
         <button class="btn btn-primary sidebar" type="button" data-bs-toggle="offcanvas"
             data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Menu
         </button>
@@ -20,13 +20,46 @@
     <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
         aria-labelledby="offcanvasWithBothOptionsLabel">
         <div class="offcanvas-header">
-            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+            <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel" style="text-align: center;">Find a group to play with on your favourite online games!</h5>
             <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
-            <p>Try scrolling the rest of the page to see this option in action.</p>
+            <div class="card mb-3">
+                <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/photos/Valorant-Logo.png" style="margin-top: -5px; height: 50px; width: auto;">
+                    <p class="card-text" style="color: black; margin-top: 3px">Valorant is a competitive, team-based first-person shooter game developed by Riot Games. Players compete in matches that consist of up to 25 rounds, with the first team to win 13 rounds being the winner. The game features a variety of agents, each with unique abilities, and players must use strategy and teamwork to outsmart their opponents. In addition to the standard game mode, Valorant offers a ranked competitive mode where players can earn a rank based on their performance.</p>
+                </div>
+            </div>
+
+
+            <div class="card mb-3">
+                <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/photos/CSGO-Logo.png" style="margin-top: -5px; height: 60px; width: auto;">
+                    <p class="card-text" style="color: black; margin-top: 3px">
+                        Counter-Strike: Global Offensive (CS:GO) is a multiplayer first-person shooter game developed by Valve Corporation. In the game, players join one of two teams, terrorists or counter-terrorists, and compete in objective-based game modes such as bomb defusal or hostage rescue. The game features a wide variety of weapons and equipment, and players must use strategy and teamwork to outmaneuver their opponents. CS:GO also offers a competitive mode where players can earn a rank based on their performance, and the game is known for its large esports scene with major tournaments and professional teams.
+                    </p>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/photos/Destiny-Logo.png" style="margin-top: -5px; height: 50px; width: auto;">
+                    <p class="card-text" style="color: black; margin-top: 3px">
+                        Destiny 2 is a first-person shooter game with elements of role-playing and MMO games, developed by Bungie. The game takes place in a fictional universe where players take on the role of a Guardian, protector of Earth's last city. Players can participate in a variety of game modes, including PvE story campaigns and competitive PvP multiplayer matches. The game features a variety of weapons and gear, and players can level up and customize their characters to fit their playstyle.
+                    </p>
+                </div>
+            </div>
+            <div class="card mb-3">
+                <div class="card-body" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="/photos/League-Logo.png" style="margin-top: -5px; height: 40px; width: auto;">
+                    <p class="card-text" style="color: black; margin-top: 3px">
+                        League of Legends is a team-based multiplayer online battle arena (MOBA) game developed by Riot Games. Players control a champion with unique abilities and battle against a team of enemy champions in fast-paced, strategic matches. The objective is to destroy the enemy team's Nexus, located at the heart of their base, while defending their own. The game is known for its large player base and competitive esports scene.
+                    </p>
+                </div>
+            </div>
+
         </div>
     </div>
+
     {{!-- End SideBar --}}
 
     {{{body}}}
