@@ -424,9 +424,64 @@ h3{
 }
 
 /* positioning for text in nav bar */
-.position-absolute.top-0.start-50.translate-middle {
-  margin-top: 38px;
+p.navbar-brand {
+  margin-top: 15px;
 }
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px; /* Set height of nav bar */
+}
+
+/* nav styling */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  flex: 1;
+  height: 50px;
+  max-width: 100%;
+  margin: 0 10px;
+  object-fit: contain;
+}
+.nav-logo-csgo {
+  margin-right: 50px;
+  height: 70px;
+}
+
+/* styling for the menu sidebar */
+.offcanvas-title {
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+
+.offcanvas-header .btn-close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  padding: 1rem;
+}
+
+/* Clan card styling */
+.col-clan {
+  border-style: none !important;
+}
+
+.card-header-clan {
+  border-bottom: none !important;
+}
+
+
+
+
+
+
 
 
 

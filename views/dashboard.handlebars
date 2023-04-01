@@ -1,19 +1,20 @@
 {{!-- Dashboard elements --}}
 
 {{!-- Header Bar --}}
-<nav class="navbar navbar-expand-lg navbar-light bg-light align-middle">
-  
-  <img src="/photos/Valorant-Logo.png" width="auto" height="50px" alt="valorant logo" style="margin-left: 10%;">
-  
-  
-  {{!-- <img src="../public/photos/CSGO-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 20%;"> --}}
-  <div class="position-absolute top-0 start-50 translate-middle">
-    <p class="navbar-brand mx-auto" href="#">Welcome to UNIFIED GG - Find a Clan, Team Up, and Win</p>
-  </div>
-  
-  {{!-- <img src="../public/photos/Destiny-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 80%;">
-  <img src="../public/photos/League-Logo.png" width="50px" height="50px" alt="valorant logo" style="margin-left: 90%;">   --}}  
+<nav class="navbar navbar-expand-lg navbar-light bg-light align-middle fixed-top">
+  <img src="/photos/Valorant-Logo.png" class="nav-logo" alt="valorant logo">
+  <img src="/photos/CSGO-Logo.png" class="nav-logo nav-logo-csgo" alt="csgo logo">
+  <p class="navbar-brand">UNIFIED GG</p>
+  <img src="/photos/Destiny-Logo.png" class="nav-logo" alt="destiny logo">
+  <img src="/photos/League-Logo.png" class="nav-logo" alt="league logo">
 </nav>
+
+
+
+
+
+
+
       
     
     <!-- main content -->
@@ -21,24 +22,24 @@
     <div class="row flex-wrap">
         <div class="col-md-9">
             <div class="card" style="margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px;">
-                <h3 class="card-header text-center">
+                <h3 class="card-header text-center card-header-clan">
                     Open Groups
                 </h3>
-                <div class="card-body" style="overflow-y: scroll;">
+                <div class="card-body" style="overflow-y: scroll; max-height: 600px;">
                     <div class="row row-cols-1 row-cols-md-3 g-4">
                         {{#each clans as |clan index| }}
-                            <div class="col">
+                            <div class="col col-clan">
                                 <div class="card h-100">
-                                    <div class="card-header">
+                                    <div class="card-header text-center">
                                         <a href="/clan/">Group {{clan.id}} - {{clan.name}}</a>
                                     </div>
                                     <div class="card-body">
-                                        <p>Game: {{clan.game}}</p>
-                                        <p>Platform: {{clan.platform}}</p>
-                                        <p>Region: {{clan.region}}</p>
-                                        <p>Players Needed: {{clan.playercount}}</p>
-                                        <p>Description: {{clan.description}}</p>
-                                        <p>Created by {{clan.creator.username}} on {{clan.createdAt}}</p>
+                                        <p class="text-dark"><strong> Game:</strong> {{clan.game}}</p>
+                                        <p class="text-dark"><strong>Platform:</strong> {{clan.platform}}</p>
+                                        <p class="text-dark"><strong>Region:</strong> {{clan.region}}</p>
+                                        <p class="text-dark"><strong>Players Needed:</strong> {{clan.playercount}}</p>
+                                        <p class="text-dark"><strong>Description:</strong> {{clan.description}}</p>
+                                        <p class="text-dark">Created by {{clan.creator.username}} on {{clan.createdAt}}</p>
                                     </div>
                                 </div>
                             </div>
