@@ -7,8 +7,10 @@ require('dotenv').config();
 
 if (process.env.JAWSDB_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_URL);
+
 } else if (process.env.JAWSDB_BROWN_URL) {
   sequelize = new Sequelize(process.env.JAWSDB_BROWN_URL);
+  
 } else { 
   sequelize = new Sequelize(
     process.env.DB_NAME,
