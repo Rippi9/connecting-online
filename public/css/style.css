@@ -17,6 +17,10 @@ h2 {
   margin-top: 0.45em;
   margin-bottom: 0.45em;
 }
+button.btn.btn-outline-danger.position-absolute.top-0.start-0.translate-middle {
+  margin-left: 100px;
+  margin-top: 60px;
+}
 
 p {
   color: #eceff1;
