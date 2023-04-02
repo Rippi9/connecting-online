@@ -29,3 +29,22 @@ const post_group = async (event) => {
 document
 .querySelector('#post_button')
 .addEventListener('click', post_group);
+
+// Logout
+const logout = async () => {
+  const response = await fetch('/api/users/logout', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+  });
+
+  if (response.ok) {
+    document.location.replace('/')
+  } else {
+    alert(response.statusText);
+  }
+};
+document
+.querySelector('#logoutBtn')
+.addEventListener('click', logout);
+
+// logout btn html selector
