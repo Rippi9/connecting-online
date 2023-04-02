@@ -4,7 +4,17 @@ const withAuth = require('../../utils/auth');
 
 router.post('/', async (req, res) => {
   try {
-    const newClan = await Clan.create(req.body);
+    const newClan = await Clan.create({
+      ...req.body,
+      user_id: req.session.user_id
+     },
+      {
+      include: {
+        model: User,
+        as: 'creator',
+        attributes: ['id','username'],
+      },
+    });
 
 
       req.session.save(() => {
