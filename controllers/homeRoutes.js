@@ -42,6 +42,7 @@ router.get('/dashboard', withAuth, async (req, res) => {
           attributes: ['username'],
           as: 'ClansForUsers',
         },
+      
         {
           model: User,
           attributes: ['username', 'id'],
@@ -64,6 +65,17 @@ router.get('/dashboard', withAuth, async (req, res) => {
 
     res.status(500).json({ message: "There has been an internal error within dashboard route" });
   }
+});
+
+router.get('/profile',  async (req, res) => {
+  try {
+  const user = await User.findOne({where: {id: req.session.user_id} });
+  const profile = user.toJSON();
+  res.render('profilePage', {profile} );
+  } catch (error) {
+      res.status(500).json({message: `There has been an internal error/ Profile route: ${error}`});
+  }
+
 });
 
 

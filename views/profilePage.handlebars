@@ -1,12 +1,13 @@
   <div class="card position-absolute top-50 start-50 translate-middle  " style="width: 35rem; background: grey;">
     
     <div class="card-body">
-      <h1>Username:... </h1>
+      <h1>Username: {{ profile.username }} </h1>
       <p class="card-text"> bio:... </p>
+      <p class="card-text">Contact: {{ profile.email }}</p>
       <div class="mb-3">
-        <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
-        <button type="button" class="btn btn-success" style="float: right; margin: 5px;">Save Bio</button>
+        <p class="bio"></p>
+        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Remember to include relevent Game Usernames in your bio!" rows="3"></textarea>
+        <button type="saveButton" class="btn btn-success" style="float: right; margin: 5px;">Save Bio</button>
       </div>
     </div>
   </div>

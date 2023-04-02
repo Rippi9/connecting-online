@@ -10,6 +10,7 @@ const post_group = async (event) => {
  
 
   if (name && game && platform && region && playercount && description) {
+    
     const response = await fetch('/api/clans', {
       method: 'POST',
       body: JSON.stringify({name,  game, platform, region, playercount, description}),

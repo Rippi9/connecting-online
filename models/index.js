@@ -29,6 +29,7 @@ Clan.belongsToMany(User, {
 Clan.belongsTo(User, {
     foreignKey: 'user_id',
     as: 'creator',
+    attributes: ['id', 'username']
 });
 
 module.exports = {
