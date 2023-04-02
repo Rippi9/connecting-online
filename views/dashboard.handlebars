@@ -19,21 +19,22 @@
     
     <!-- main content -->
     <div class="container-fluid position-absolute top-50 start-50 translate-middle">
-    <div class="row flex-wrap">
-        <div class="col-md-9">
-            <div class="card bg-dark" style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px; height: calc(100% - 40px);">
-                <h3 class="card-header text-center card-header-clan text-white">
-                    Open Groups
-                </h3>
-                <div class="card-body" style="overflow-y: scroll; max-height: 600px; margin-right: 7px;">
-                    <div class="row row-cols-1 row-cols-md-3 g-4">
-                        {{#each clans as |clan index| }}
+        <div class="row flex-wrap">
+            <div class="col-md-9">
+                <div class="card bg-dark"
+                    style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; margin-left: 10px; height: calc(100% - 40px);">
+                    <h3 class="card-header text-center card-header-clan text-white">
+                        Open Groups
+                    </h3>
+                    <div class="card-body" style="overflow-y: scroll; max-height: 600px; margin-right: 7px;">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            {{#each clans as |clan index| }}
                             <div class="col col-clan">
                                 <div class="card h-100 gaming-card group-background">
                                     <div class="card-header text-center text-center group-title">
                                         <p class="text-dark m-0"><strong>Group {{clan.id}} - {{clan.name}}</strong></p>
                                     </div>
-
+    
                                     <div class="card-body">
                                         <p class="text-dark"><strong> Game:</strong> {{clan.game}}</p>
                                         <p class="text-dark"><strong>Platform:</strong> {{clan.platform}}</p>
@@ -44,28 +45,32 @@
                                     </div>
                                 </div>
                             </div>
-                        {{/each}}
+                            {{/each}}
+                        </div>
                     </div>
                 </div>
+                <button type="button" class="btn btn-outline-danger position-absolute top-0 start-0 translate-middle" style="z-index:2000"><strong>LOGOUT</strong></button>
             </div>
-        </div>
-
-
+    
+    
             <!-- Group -->
             <div class="col-md-3">
-                <div class="card bg-dark" style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; height: calc(100% - 40px);">
+                <div class="card bg-dark"
+                    style="z-index: 1300; margin-top: 20px; margin-right: 10px; margin-bottom: 20px; height: calc(100% - 40px);">
                     <div id="group" class="card-header text-center text-white card-header-clan">
                         <h3 id="group_name bg-dark">Create Group</h3>
                     </div>
                     <!-- select a game dropdown list -->
                     <div class="card-body ">
                         <form id="createFrom ">
-                              
-                                <div class="mb-3 gaming-card">
-                                    <textarea class="form-control" id="groupName" rows="1" placeholder="Enter Group Name"></textarea>
-                                </div>
-
-                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_game">
+    
+                            <div class="mb-3 gaming-card">
+                                <textarea class="form-control" id="groupName" rows="1"
+                                    placeholder="Enter Group Name"></textarea>
+                            </div>
+    
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example"
+                                id="select_game">
                                 <option selected>Select a Game</option>
                                 <option value="Valorant">Valorant</option>
                                 <option value="CSGO">CSGO</option>
@@ -73,15 +78,17 @@
                                 <option value="LoL">LoL</option>
                             </select>
                             <!-- select platform dropdown list -->
-                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_platform">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example"
+                                id="select_platform">
                                 <option selected>Select a Platform</option>
                                 <option value="PC">PC</option>
                                 <option value="PS">PS</option>
                                 <option value="Xbox">Xbox</option>
                             </select>
-                    
+    
                             <!-- select region dropdown list -->
-                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_region">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example"
+                                id="select_region">
                                 <option selected>Select a Region</option>
                                 <option value="Oceania">Oceania</option>
                                 <option value="North America">North America</option>
@@ -90,9 +97,10 @@
                                 <option value="Africa">Africa</option>
                                 <option value="Europe">Europe</option>
                             </select>
-                    
+    
                             <!-- select no# player dropdown list -->
-                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example" id="select_players">
+                            <select class="form-select form-select-lg mb-3 gaming-card" aria-label=".form-select-lg example"
+                                id="select_players">
                                 <option selected>Players Required</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -101,7 +109,8 @@
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                             </select>
-                             {{!-- <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example" id="userId">
+                            {{!-- <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                                id="userId">
                                 <option selected>User id</option>
                                 <option value="1">1</option>
                                 <option value="2">2</option>
@@ -110,22 +119,23 @@
                                 <option value="5">5</option>
                                 <option value="6">6</option>
                             </select> --}}
-                    
+    
                             <div class="mb-3 gaming-card">
-                    
+    
                                 <textarea class="form-control" id="groupBio" rows="5"
                                     placeholder="Please add more info to your group post so people know what you're looking for! (i.e. mic required etc)"></textarea>
                             </div>
-                              <div class="card bg-dark border-0">                           
-                            <div class="d-flex justify-content-center">
-                                <!-- Button -->
-                                <button type="button" class="btn btn-primary " id="post_button">POST GROUP</button>
+                            <div class="card bg-dark border-0">
+                                <div class="d-flex justify-content-center">
+                                    <!-- Button -->
+                                    <button type="button" class="btn btn-primary " id="post_button">POST GROUP</button>
                         </form>
-                            </div>                           
-                    </div>
                     </div>
                 </div>
-            </div> <!-- end of outer row -->
+            </div>
+        </div>
+         
+    </div> <!-- end of outer row -->
     </div>
     </div>
     <script src="/js/dashboard.js"></script>
