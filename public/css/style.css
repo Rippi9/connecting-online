@@ -302,6 +302,18 @@ nav {
   background-size: cover;
 }
 
+@media only screen and (max-width: 651px) {
+  .nav-logo {
+    display: none;
+  }
+
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
 
 
 
