@@ -63,7 +63,7 @@ N/A
 
 <!--  -->
 ## Usage
-To use website please visit the following link: [**UnifiedGG**](#https://unifiedgg.herokuapp.com/login)<br>
+To use website please visit the following link: https://unifiedgg.herokuapp.com/login<br>
 
 Once the user navigates to the website and registers an account, then the user will be able to create group. Follow the on screen prompts to generate details that relates to your group and click "POST GROUP" button to create your card, the cards displayed on the dashboard are universal so other users are able to view them.  
 
